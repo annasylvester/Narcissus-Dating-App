@@ -28,15 +28,16 @@
 
       <div class="container" style="background-color: white; padding: 5%; margin-top: 75px; border: solid; border-color: lightblue; border-width: 5px;">
 
+        <!-- Header -->
         <div class="center-align">
           <h2 style="font-family: 'Roboto Condensed', sans-serif; padding-bottom: 5%; color: navy;">SURVEY</h2>
         </div>
 
-
+        <!-- Name Input -->
         <div class="row">
           <div class="col s12">
             <div class="input-field col s6">
-              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+              <input id="first_name" type="text" class="validate">
               <label for="first_name">First Name</label>
             </div>
             <div class="input-field col s6">
@@ -46,12 +47,12 @@
           </div>
         </div>
 
-
+        <!-- Upload photo -->
         <div class="row">
           <div class="col s12">
             <form action="#">
               <div class="file-field input-field">
-                <div class="btn">
+                <div class="btn" style="background-color: pink;">
                   <span>Upload Photo</span>
                   <input type="file">
                 </div>
@@ -63,37 +64,195 @@
           </div>
         </div>
 
-
+        <!-- Survey Questions -->
+        <div class="row">
+          <div class="col s12">
+            <h4 style="font-size: 14pt; color: gray;">Q1. How much do you love yourself?</h4>
+            <select class="browser-default">
+              <option value="" disabled selected>Choose your answer</option>
+              <option value="1">1 -- Not at all</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 -- I'm a gift to the world</option>
+            </select>
+          </div>
+        </div>
 
         <div class="row">
           <div class="col s12">
-            <h4><strong>Q2: You secretly like rainy days because you have an excuse to stay in bed and read a book.</strong></h4>
-            <div class="input-field">
-              <select>
-                <option value="" disabled selected>Choose your option</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-              </select>
-              <label>Materialize Select</label>
-            </div>
+            <h4 style="font-size: 14pt; color: gray;">Q2. Do you follow your head, heart or somewhere inbetween?</h4>
+            <select class="browser-default">
+              <option value="" disabled selected>Choose your answer</option>
+              <option value="1">1 -- Head</option>
+              <option value="2">2</option>
+              <option value="3">3 -- Half and half</option>
+              <option value="4">4</option>
+              <option value="5">5 -- Heart</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12">
+            <h4 style="font-size: 14pt; color: gray;">Q3. Are you always right?</h4>
+            <select class="browser-default">
+              <option value="" disabled selected>Choose your answer</option>
+              <option value="1">1 -- Not even close</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 -- 100%. And I'm right about this too</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12">
+            <h4 style="font-size: 14pt; color: gray;">Q4. Do you find it easy to stay focused under pressure?</h4>
+            <select class="browser-default">
+              <option value="" disabled selected>Choose your answer</option>
+              <option value="1">1 -- No way. I get frazzeled easily</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 -- Pressure? Bring it on</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12">
+            <h4 style="font-size: 14pt; color: gray;">Q5. Do other people easily upset you?</h4>
+            <select class="browser-default">
+              <option value="" disabled selected>Choose your answer</option>
+              <option value="1">1 -- No. We're all human</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 -- Yes. Other people are annoying</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12">
+            <h4 style="font-size: 14pt; color: gray;">Q6. Do you think everyone’s views should be respected regardless
+              of whether they are supported by facts or not?</h4>
+            <select class="browser-default">
+              <option value="" disabled selected>Choose your answer</option>
+              <option value="1">1 -- Yes, of course. Feelings are valid</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 -- Not at all. Only facts matter</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12">
+            <h4 style="font-size: 14pt; color: gray;">Q7. Do you feel more energetic after spending time with a group
+              of people?</h4>
+            <select class="browser-default">
+              <option value="" disabled selected>Choose your answer</option>
+              <option value="1">1 -- No. I'm a total introvert</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 -- Yes. I'm a total extrovert</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12">
+            <h4 style="font-size: 14pt; color: gray;">Q8. Is it easy for you to relate to other peoples feelings?</h4>
+            <select class="browser-default">
+              <option value="" disabled selected>Choose your answer</option>
+              <option value="1">1 -- Yes, totally</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 -- No. I don't get other people</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12">
+            <h4 style="font-size: 14pt; color: gray;">Q9. Do you see yourself as dependable and self disciplined?</h4>
+            <select class="browser-default">
+              <option value="" disabled selected>Choose your answer</option>
+              <option value="1">1 -- No way</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 -- Yes</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12">
+            <h4 style="font-size: 14pt; color: gray;">Q10. Do you get carried away by fantasies and ideas?</h4>
+            <select class="browser-default">
+              <option value="" disabled selected>Choose your answer</option>
+              <option value="1">1 -- What can I say, I'm a dreamer</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 -- None of that for me</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="container">
+          <div class="center-align">
+            <button type="submit" class="btn btn-primary btn-lg btn-block" style="background-color: pink; " id="submit">
+              <i class="fa fa-check-circle" aria-hidden="true">Submit</i>
+            </button>
           </div>
         </div>
 
 
 
       </div>
+      <div class="col s0 m1 l2"></div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="center-align">
+            <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/jinana3/FriendFinder">GitHub
+                Repo</a></p>
+          </div>
+        </div>
+      </footer>
     </div>
-    <div class="col s0 m1 l2"></div>
+
+    <!-- Modal Pop Up -->
+    <div id="results-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h2 class="modal-title"><strong>Best Match</strong></h2>
+          </div>
+          <div class="modal-body">
+            <h2 id="match-name"></h2>
+            <img id="match-img" height="200" alt="https://static.pexels.com/photos/20787/pexels-photo.jpg">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-
-
-  <footer class="footer center-align">
-    <div class="container">
-      <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/jinana3/FriendFinder">GitHub Repo</a></p>
-    </div>
-  </footer>
 
   <script>
     $(document).ready(function () {
@@ -102,184 +261,7 @@
   </script>
 
 
-
-
-
-
-
-  <!-- <div class="container">
-    <h2>Survey Questions</h2>
-    <hr>
-    <h3>
-      <strong>About You</strong>
-    </h3>
-    <h4>Name (Required)</h4>
-    <input type="text" id="name" class="form-control" required="">
-    <h4>Link to Photo Image (Required)</h4>
-    <input type="text" id="photo" class="form-control" required="">
-    <hr>
-
-    <h4><strong>Q1: On a sunny Sunday you prefer to stay at home and enjoy time cooking good food and eating it in the sun.</strong></h4>
-    <select class="chosen-select" id="q1" style="font-weight: bold; border-radius: 5px; padding: 5px; box-shadow: 2px 2px;">
-      <option disabled selected value> -- select an option -- </option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    
-    <br>
-    <br>
-    <h4><strong>Q2: You secretly like rainy days because you have an excuse to stay in bed and read a book.</strong></h4>
-    <select class="chosen-select" id="q2" style="font-weight: bold; border-radius: 5px; padding: 5px; box-shadow: 2px 2px;">
-      <option disabled selected value> -- select an option -- </option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    
-    <br>
-    <br>
-    <h4><strong>Q3: You prefer long hikes with a picnic as a date rather than a restaurant-movie night.</strong></h4>
-    <select class="chosen-select" id="q3" style="font-weight: bold; border-radius: 5px; padding: 5px; box-shadow: 2px 2px;">
-      <option disabled selected value> -- select an option -- </option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    
-    <br>
-    <br>
-    <h4><strong>Q4: You care immensely about the environment and hope those around you would too.</strong></h4>
-    <select class="chosen-select" id="q4" style="font-weight: bold; border-radius: 5px; padding: 5px; box-shadow: 2px 2px;">
-      <option disabled selected value> -- select an option -- </option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    
-    <br>
-    <br>
-    <h4><strong>Q5: You love to help and care for others but sometimes feel you are not receiving as much love.</strong></h4>
-    <select class="chosen-select" id="q5" style="font-weight: bold; border-radius: 5px; padding: 5px; box-shadow: 2px 2px;">
-      <option disabled selected value> -- select an option -- </option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    
-    <br>
-    <br>
-    <h4><strong>Q6: You put family first.</strong></h4>
-    <select class="chosen-select" id="q6" style="font-weight: bold; border-radius: 5px; padding: 5px; box-shadow: 2px 2px;">
-      <option disabled selected value> -- select an option -- </option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    
-    <br>
-    <br>
-    <h4><strong>Q7: You like having four seasons.</strong></h4>
-    <select class="chosen-select" id="q7" style="font-weight: bold; border-radius: 5px; padding: 5px; box-shadow: 2px 2px;">
-      <option disabled selected value> -- select an option -- </option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    
-    <br>
-    <br>
-    <h4><strong>Q8: You love to travel light.</strong></h4>
-    <select class="chosen-select" id="q8" style="font-weight: bold; border-radius: 5px; padding: 5px; box-shadow: 2px 2px;">
-      <option disabled selected value> -- select an option -- </option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-
-    <br>
-    <br>
-    <h4><strong>Q9: You know the difference between compassion and empathy.</strong></h4>
-    <select class="chosen-select" id="q9" style="font-weight: bold; border-radius: 5px; padding: 5px; box-shadow: 2px 2px;">
-      <option disabled selected value> -- select an option -- </option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    
-    <br>
-    <br>
-    <h4><strong>Q10: You like long hugs.</strong></h4>
-    <select class="chosen-select" id="q10" style="font-weight: bold; border-radius: 5px; padding: 5px; box-shadow: 2px 2px;">
-      <option disabled selected value> -- select an option -- </option>
-      <option value="1">1 (Strongly Disagree)</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5 (Strongly Agree)</option>
-    </select>
-    //////
-
-
-    <br>
-    <br>
-    Submit Button -->
-  <!-- <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
-      <i class="fa fa-check-circle" aria-hidden="true"></i>
-     Submit
-   </button>
-    <hr>
-    <footer class="footer">
-      <div class="container">
-        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/jinana3/FriendFinder">GitHub Repo</a></p>
-      </div>
-    </footer>
-  </div> -->
-
-  <!-- Modal??? copied from demo, is this what shows the results -->
-  <!-- don't know yet -->
-
-  <!-- <div id="results-modal" class="modal fade" role="dialog">
-    <div class="modal-dialog"> -->
-  <!-- Modal content-->
-  <!-- <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">×</button>
-          <h2 class="modal-title"><strong>Best Match</strong></h2>
-        </div>
-        <div class="modal-body">
-          <h2 id="match-name"></h2>
-          <img id="match-img" height="200" alt="https://static.pexels.com/photos/20787/pexels-photo.jpg">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-
-
-
-  <!-- <script type="text/javascript">
+  <script type="text/javascript">
     $("#submit").on("click", function (event) {
       event.preventDefault();
 
@@ -327,7 +309,8 @@
       } else {
         alert("Form not correctly filled out!");
       }
-    }); -->
+    });
 
 
-</body>
+    <
+    /body>
