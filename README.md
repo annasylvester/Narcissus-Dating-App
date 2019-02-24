@@ -1,6 +1,6 @@
 # Narcissus-Dating-App
 
-![logo](./app/public/images/narcissuslogowords.png?raw=true |width=100 "Logo")  
+![logo](./app/public/images/narcissuslogowords.png?raw=true | width=100 )  
 
 ## Assignment
 * Build a compatability-based "FriendFinder" application... basically a dating app.
