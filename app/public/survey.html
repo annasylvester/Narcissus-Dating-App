@@ -1,21 +1,113 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>FriendFinder</title>
-  <!-- CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-  <!-- Chosen: inspect demo found below links-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+  <title>Narcissus</title>
+
+  <!-- Materialize CSS and JS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- My Style Sheet -->
+  <link href="./style.css" type="text/css" rel="stylesheet" />
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+
+
 </head>
 
 <body>
-  <div class="container">
+
+  <div class="row">
+    <div class="col s0 m1 l2"></div>
+    <div class="col s12 m10 l8">
+
+      <div class="container" style="background-color: white; padding: 5%; margin-top: 75px; border: solid; border-color: lightblue; border-width: 5px;">
+
+        <div class="center-align">
+          <h2 style="font-family: 'Roboto Condensed', sans-serif; padding-bottom: 5%; color: navy;">SURVEY</h2>
+        </div>
+
+
+        <div class="row">
+          <div class="col s12">
+            <div class="input-field col s6">
+              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+              <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate">
+              <label for="last_name">Last Name</label>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col s12">
+            <form action="#">
+              <div class="file-field input-field">
+                <div class="btn">
+                  <span>Upload Photo</span>
+                  <input type="file">
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col s12">
+            <h4><strong>Q2: You secretly like rainy days because you have an excuse to stay in bed and read a book.</strong></h4>
+            <div class="input-field">
+              <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <label>Materialize Select</label>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+    <div class="col s0 m1 l2"></div>
+  </div>
+
+
+
+  <footer class="footer center-align">
+    <div class="container">
+      <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/jinana3/FriendFinder">GitHub Repo</a></p>
+    </div>
+  </footer>
+
+  <script>
+    $(document).ready(function () {
+      $('select').formSelect();
+    });
+  </script>
+
+
+
+
+
+
+
+  <!-- <div class="container">
     <h2>Survey Questions</h2>
     <hr>
     <h3>
@@ -144,12 +236,13 @@
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
+    //////
 
 
     <br>
     <br>
-    <!-- Submit Button -->
-    <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+    Submit Button -->
+  <!-- <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
       <i class="fa fa-check-circle" aria-hidden="true"></i>
      Submit
    </button>
@@ -159,15 +252,15 @@
         <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/jinana3/FriendFinder">GitHub Repo</a></p>
       </div>
     </footer>
-  </div>
+  </div> -->
 
   <!-- Modal??? copied from demo, is this what shows the results -->
   <!-- don't know yet -->
-  
-  <div id="results-modal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <!-- Modal content-->
-      <div class="modal-content">
+
+  <!-- <div id="results-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog"> -->
+  <!-- Modal content-->
+  <!-- <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">×</button>
           <h2 class="modal-title"><strong>Best Match</strong></h2>
@@ -181,54 +274,60 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
-  <script type="text/javascript">
-    $("#submit").on("click", function(event) {
-        event.preventDefault();
-        function validate(){
-          var isValid = true;
-          $(".form-control").each(function(){
-            if($(this).val() === "" || $(this).val() === null){
-              isValid = false;
-            }
-          });
-          $(".chosen-select").each(function(){
-            if($(this).val() === null || $(this).val() === ""){
-              isValid = false;
-            }
-          })
-          return isValid;
-        }
-        
-        //if data is valid then will post it
-        if(validate()){
-            var score = [$("#q1").val().trim(), $("#q2").val().trim(), $("#q3").val().trim(), $("#q4").val().trim(), $("#q5").val().trim(), $("#q6").val().trim(), $("#q7").val().trim(), $("#q8").val().trim(), $("#q9").val().trim(), $("#q10").val().trim()];
-            var newFriend = {
-                name: $("#name").val(),
-                photo: $("#photo").val(),
-                scores: score
-                };
-            console.log(newFriend);
-            $.ajax({
-              type: 'POST',
-              data: newFriend,
-              url: "/api/matches",
-              success: function(res){
-                console.log(res);
-                alert("Info added!");
-                $("#match-name").text(res.name);
-                $("#match-img").attr("src", res.photo);
-                $("#results-modal").modal("toggle"); //this apparently turns on the modal
-              }
 
-            })
+
+  <!-- <script type="text/javascript">
+    $("#submit").on("click", function (event) {
+      event.preventDefault();
+
+      function validate() {
+        var isValid = true;
+        $(".form-control").each(function () {
+          if ($(this).val() === "" || $(this).val() === null) {
+            isValid = false;
           }
-          else{
-            alert("Form not correctly filled out!");
+        });
+        $(".chosen-select").each(function () {
+          if ($(this).val() === null || $(this).val() === "") {
+            isValid = false;
           }
-    });
-  </script>
+        })
+        return isValid;
+      }
+
+      //if data is valid then will post it
+      if (validate()) {
+        var score = [$("#q1").val().trim(), $("#q2").val().trim(), $("#q3").val().trim(), $("#q4").val().trim(),
+          $(
+            "#q5").val().trim(), $("#q6").val().trim(), $("#q7").val().trim(), $("#q8").val().trim(), $("#q9").val()
+          .trim(), $("#q10").val().trim()
+        ];
+        var newFriend = {
+          name: $("#name").val(),
+          photo: $("#photo").val(),
+          scores: score
+        };
+        console.log(newFriend);
+        $.ajax({
+          type: 'POST',
+          data: newFriend,
+          url: "/api/matches",
+          success: function (res) {
+            console.log(res);
+            alert("Info added!");
+            $("#match-name").text(res.name);
+            $("#match-img").attr("src", res.photo);
+            $("#results-modal").modal("toggle"); //this apparently turns on the modal
+          }
+
+        })
+      } else {
+        alert("Form not correctly filled out!");
+      }
+    }); -->
+
 
 </body>

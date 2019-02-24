@@ -8,16 +8,18 @@
   <!-- Materialize CSS and JS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+  <!-- My Style Sheet -->
   <link href="./style.css" type="text/css" rel="stylesheet" />
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  
 
 </head>
 
 <body>
-
 
   <div class="row">
     <div class="col s0 m1 l3"></div>
@@ -27,52 +29,26 @@
       </row>
       <row>
         <p class="center-align">
-          <a class="waves-effect waves-light btn" style="background-color: lightblue; color: navy; font-weight: bolder; font-size: 18pt;">Find Match</a>
+          <a href="/survey" class="waves-effect waves-light btn" style="background-color: lightblue; color: navy; font-size: 18pt; font-family: 'Roboto Condensed', sans-serif;">Find
+            Match</a>
         </p>
       </row>
     </div>
     <div class="col s0 m1 l3"></div>
+  </div>
 
 
+  <footer class="footer center-align">
+    <div class="container">
+      <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/jinana3/FriendFinder">GitHub Repo</a></p>
+    </div>
+  </footer>
 
 
+  <script>
+    $(document).ready(function () {
+      $('.parallax').parallax();
+    });
+  </script>
 
-
-
-
-
-
-
-    <!-- <div class="container">
-		<div class="jumbotron">
-			<h1><i class="fa fa-facebook-square" aria-hidden="true"></i> Friend Finder</h1>
-			<hr>
-			<h3>Looking for a new best friend?</h3>
-			<h3>Take this quiz to find the friend with the greatest compatibility!</h3>
-			<br>
-			<div>
-				<a href="/survey">
-					<button type="button" class="btn btn-lg btn-primary">
-						<h4>
-							<span class="glyphicon glyphicon-list-alt"></span>
-							Go To Survey
-						</h4>
-					</button>
-				</a>
-			</div>
-		</div>
-		<footer class="footer">
-			<div class="container">
-				<p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/jinana3/FriendFinder">GitHub Repo</a></p>
-			</div>
-		</footer>
-	</div>
-</body> -->
-
-</html>
-
-<script>
-  $(document).ready(function () {
-    $('.parallax').parallax();
-  });
-</script>
+</body>
