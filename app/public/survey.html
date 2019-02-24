@@ -37,12 +37,8 @@
         <div class="row">
           <div class="col s12">
             <div class="input-field col s6">
-              <input id="first_name" type="text" class="validate">
-              <label for="first_name">First Name</label>
-            </div>
-            <div class="input-field col s6">
-              <input id="last_name" type="text" class="validate">
-              <label for="last_name">Last Name</label>
+              <input id="name" type="text" class="form-control">
+              <label for="name">First Name</label>
             </div>
           </div>
         </div>
@@ -54,7 +50,7 @@
               <div class="file-field input-field">
                 <div class="btn" style="background-color: pink;">
                   <span>Upload Photo</span>
-                  <input type="file">
+                  <input type="file" class="form-control" id="photo">
                 </div>
                 <div class="file-path-wrapper">
                   <input class="file-path validate" type="text">
@@ -68,7 +64,7 @@
         <div class="row">
           <div class="col s12">
             <h4 style="font-size: 14pt; color: gray;">Q1. How much do you love yourself?</h4>
-            <select class="browser-default">
+            <select class="browser-default chosen-select" id="q1">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 -- Not at all</option>
               <option value="2">2</option>
@@ -82,7 +78,7 @@
         <div class="row">
           <div class="col s12">
             <h4 style="font-size: 14pt; color: gray;">Q2. Do you follow your head, heart or somewhere inbetween?</h4>
-            <select class="browser-default">
+            <select class="browser-default chosen-select" id="q2">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 -- Head</option>
               <option value="2">2</option>
@@ -96,7 +92,7 @@
         <div class="row">
           <div class="col s12">
             <h4 style="font-size: 14pt; color: gray;">Q3. Are you always right?</h4>
-            <select class="browser-default">
+            <select class="browser-default chosen-select" id="q3">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 -- Not even close</option>
               <option value="2">2</option>
@@ -110,7 +106,7 @@
         <div class="row">
           <div class="col s12">
             <h4 style="font-size: 14pt; color: gray;">Q4. Do you find it easy to stay focused under pressure?</h4>
-            <select class="browser-default">
+            <select class="browser-default chosen-select" id="q4">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 -- No way. I get frazzeled easily</option>
               <option value="2">2</option>
@@ -124,7 +120,7 @@
         <div class="row">
           <div class="col s12">
             <h4 style="font-size: 14pt; color: gray;">Q5. Do other people easily upset you?</h4>
-            <select class="browser-default">
+            <select class="browser-default chosen-select" id="q5">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 -- No. We're all human</option>
               <option value="2">2</option>
@@ -139,7 +135,7 @@
           <div class="col s12">
             <h4 style="font-size: 14pt; color: gray;">Q6. Do you think everyone’s views should be respected regardless
               of whether they are supported by facts or not?</h4>
-            <select class="browser-default">
+            <select class="browser-default chosen-select" id="q6">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 -- Yes, of course. Feelings are valid</option>
               <option value="2">2</option>
@@ -154,7 +150,7 @@
           <div class="col s12">
             <h4 style="font-size: 14pt; color: gray;">Q7. Do you feel more energetic after spending time with a group
               of people?</h4>
-            <select class="browser-default">
+            <select class="browser-default chosen-select" id="q7">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 -- No. I'm a total introvert</option>
               <option value="2">2</option>
@@ -168,7 +164,7 @@
         <div class="row">
           <div class="col s12">
             <h4 style="font-size: 14pt; color: gray;">Q8. Is it easy for you to relate to other peoples feelings?</h4>
-            <select class="browser-default">
+            <select class="browser-default chosen-select" id="q8">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 -- Yes, totally</option>
               <option value="2">2</option>
@@ -182,7 +178,7 @@
         <div class="row">
           <div class="col s12">
             <h4 style="font-size: 14pt; color: gray;">Q9. Do you see yourself as dependable and self disciplined?</h4>
-            <select class="browser-default">
+            <select class="browser-default chosen-select" id="q9">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 -- No way</option>
               <option value="2">2</option>
@@ -196,7 +192,7 @@
         <div class="row">
           <div class="col s12">
             <h4 style="font-size: 14pt; color: gray;">Q10. Do you get carried away by fantasies and ideas?</h4>
-            <select class="browser-default">
+            <select class="browser-default chosen-select" id="q10">
               <option value="" disabled selected>Choose your answer</option>
               <option value="1">1 -- What can I say, I'm a dreamer</option>
               <option value="2">2</option>
@@ -216,8 +212,6 @@
           </div>
         </div>
 
-
-
       </div>
       <div class="col s0 m1 l2"></div>
 
@@ -225,7 +219,7 @@
       <footer class="footer">
         <div class="container">
           <div class="center-align">
-            <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/jinana3/FriendFinder">GitHub
+            <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/annasylvester/Narcissus-Dating-App">GitHub
                 Repo</a></p>
           </div>
         </div>
@@ -310,7 +304,6 @@
         alert("Form not correctly filled out!");
       }
     });
+  </script>
 
-
-    <
-    /body>
+</body>
