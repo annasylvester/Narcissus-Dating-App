@@ -27,6 +27,7 @@ module.exports = function (app) {
 
 			//push results into scoresArray
 			scoresArray.push(scoresDiff);
+			console.log("Results pushed to array");
 		}
 
 		//after all friends are compared, find best match
@@ -35,10 +36,12 @@ module.exports = function (app) {
 				bestMatch = i;
 			}
 		}
+		console.log("finding best match");
 
 		//return bestMatch data
 		var bff = matchesData[bestMatch];
 		res.json(bff);
+		console.log("match sent")
 
 		//pushes new submission into the friendsList array
 		matchesData.push(req.body);

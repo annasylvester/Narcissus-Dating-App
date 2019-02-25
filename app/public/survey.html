@@ -226,100 +226,83 @@
       </footer>
     </div>
 
-
-    <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
-          
-
-    <!-- Modal Pop Up -->
-    <div id="results-modal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">×</button>
-            <h2 class="modal-title"><strong>Best Match</strong></h2>
-          </div>
-          <div class="modal-body">
-            <h2 id="match-name"></h2>
-            <img id="match-img" height="200" alt="https://static.pexels.com/photos/20787/pexels-photo.jpg">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <div class="center-align">
+          <h4>You matched with...</h4>
+          <h2 id="match-name"></h2>
+          <img id="match-img" height="200" alt="https://static.pexels.com/photos/20787/pexels-photo.jpg">
+          <p>A bunch of text</p>
+        </div>
+      </div>
+      <div class="center-align">
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
         </div>
       </div>
     </div>
-  </div>
 
 
-  <script>
-    $(document).ready(function () {
-      $('select').formSelect();
-    });
-  </script>
 
+    <script>
+      $(document).ready(function () {
+        $('select').formSelect();
 
-  <script type="text/javascript">
-    $("#submit").on("click", function (event) {
-      event.preventDefault();
+      });
+    </script>
 
-      function validate() {
-        var isValid = true;
-        $(".form-control").each(function () {
-          if ($(this).val() === "" || $(this).val() === null) {
-            isValid = false;
-          }
-        });
-        $(".chosen-select").each(function () {
-          if ($(this).val() === null || $(this).val() === "") {
-            isValid = false;
-          }
-        })
-        return isValid;
-      }
+    <script type="text/javascript">
+      $("#submit").on("click", function (event) {
+        event.preventDefault();
 
-      //if data is valid then will post it
-      if (validate()) {
-        var score = [$("#q1").val().trim(), $("#q2").val().trim(), $("#q3").val().trim(), $("#q4").val().trim(),
-          $(
-            "#q5").val().trim(), $("#q6").val().trim(), $("#q7").val().trim(), $("#q8").val().trim(), $("#q9").val()
-          .trim(), $("#q10").val().trim()
-        ];
-        var newFriend = {
-          name: $("#name").val(),
-          photo: $("#photo").val(),
-          scores: score
-        };
-        console.log(newFriend);
-        $.ajax({
-          type: 'POST',
-          data: newFriend,
-          url: "/api/matches",
-          success: function (res) {
-            console.log(res);
-            alert("Info added!");
-            $("#match-name").text(res.name);
-            $("#match-img").attr("src", res.photo);
-            $("#results-modal").modal("toggle"); //this apparently turns on the modal
-          }
+        function validate() {
+          var isValid = true;
+          $(".form-control").each(function () {
+            if ($(this).val() === "" || $(this).val() === null) {
+              isValid = false;
+            }
+          });
+          $(".chosen-select").each(function () {
+            if ($(this).val() === null || $(this).val() === "") {
+              isValid = false;
+            }
+          })
+          return isValid;
+        }
 
-        })
-      } else {
-        alert("Form not correctly filled out!");
-      }
-    });
-  </script>
+        //if data is valid then will post it
+        if (validate()) {
+          var score = [$("#q1").val().trim(), $("#q2").val().trim(), $("#q3").val().trim(), $("#q4").val().trim(),
+            $(
+              "#q5").val().trim(), $("#q6").val().trim(), $("#q7").val().trim(), $("#q8").val().trim(), $("#q9").val()
+            .trim(), $("#q10").val().trim()
+          ];
+          var newFriend = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            scores: score
+          };
+          console.log(newFriend);
+          $.ajax({
+            type: 'POST',
+            data: newFriend,
+            url: "/api/matches",
+            success: function (res) {
+              console.log(res);
+              alert("Info added!");
+              $("#match-name").text(res.name);
+              $("#match-img").attr("src", res.photo);
+              var Modalelem = document.querySelector('.modal');
+              var instance = M.Modal.init(Modalelem);
+              instance.open();
+            }
+
+          })
+        } else {
+          alert("Form not correctly filled out!");
+        }
+      });
+    </script>
 
 </body>
