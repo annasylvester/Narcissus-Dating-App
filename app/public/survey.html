@@ -40,23 +40,12 @@
               <input id="name" type="text" class="form-control">
               <label for="name">First Name</label>
             </div>
-          </div>
-        </div>
 
-        <!-- Upload photo -->
-        <div class="row">
-          <div class="col s12">
-            <form action="#">
-              <div class="file-field input-field">
-                <div class="btn" style="background-color: pink;">
-                  <span>Upload Photo</span>
-                  <input type="file" class="form-control" id="photo">
-                </div>
-                <div class="file-path-wrapper">
-                  <input class="file-path validate" type="text">
-                </div>
-              </div>
-            </form>
+            <!-- Photo Link -->
+            <div class="input-field col s6">
+              <input id="photo" type="text" class="form-control">
+              <label for="photo">Photo Link</label>
+            </div>
           </div>
         </div>
 
@@ -273,15 +262,15 @@
         //if data is valid then will post it
         if (validate()) {
           var score = [
-            $("#q1").val().trim(), 
-            $("#q2").val().trim(), 
-            $("#q3").val().trim(), 
+            $("#q1").val().trim(),
+            $("#q2").val().trim(),
+            $("#q3").val().trim(),
             $("#q4").val().trim(),
-            $("#q5").val().trim(), 
-            $("#q6").val().trim(), 
-            $("#q7").val().trim(), 
-            $("#q8").val().trim(), 
-            $("#q9").val().trim(), 
+            $("#q5").val().trim(),
+            $("#q6").val().trim(),
+            $("#q7").val().trim(),
+            $("#q8").val().trim(),
+            $("#q9").val().trim(),
             $("#q10").val().trim()
           ];
           var newFriend = {
