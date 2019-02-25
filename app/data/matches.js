@@ -4,14 +4,14 @@ let matchesArr = [{
 		"scores": [
 			5,
 			1,
-			4,
-			4,
+			5,
 			5,
 			1,
-			2,
 			5,
-			4,
-			1
+			5,
+			5,
+			5,
+			5
 		]
 	},
 	{
@@ -21,13 +21,29 @@ let matchesArr = [{
 			5,
 			5,
 			5,
+			1,
+			1,
 			5,
 			5,
 			5,
+			4,
+			1
+		]
+	}, 
+	{
+		"name": "Doug the Pug",
+		"photo": "https://en.wikipedia.org/wiki/Doug_the_Pug#/media/File:DougNYC.jpg",
+		"scores": [
 			5,
+			4,
+			1,
+			1,
+			1,
+			1,
 			5,
-			5,
-			5
+			1,
+			3,
+			1
 		]
 	}
 
