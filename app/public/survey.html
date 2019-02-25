@@ -232,12 +232,12 @@
         <div class="center-align">
           <h4>You matched with...</h4>
           <h2 id="match-name"></h2>
-          <img id="match-img" height="200" alt="https://static.pexels.com/photos/20787/pexels-photo.jpg">
+          <img id="match-img" height="200" src="">
         </div>
       </div>
       <div class="center-align">
         <div class="modal-footer">
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok, cool.</a>
+          <a href="/survey" class="modal-close waves-effect waves-green btn-flat">Ok, cool.</a>
         </div>
       </div>
     </div>
@@ -272,10 +272,17 @@
 
         //if data is valid then will post it
         if (validate()) {
-          var score = [$("#q1").val().trim(), $("#q2").val().trim(), $("#q3").val().trim(), $("#q4").val().trim(),
-            $(
-              "#q5").val().trim(), $("#q6").val().trim(), $("#q7").val().trim(), $("#q8").val().trim(), $("#q9").val()
-            .trim(), $("#q10").val().trim()
+          var score = [
+            $("#q1").val().trim(), 
+            $("#q2").val().trim(), 
+            $("#q3").val().trim(), 
+            $("#q4").val().trim(),
+            $("#q5").val().trim(), 
+            $("#q6").val().trim(), 
+            $("#q7").val().trim(), 
+            $("#q8").val().trim(), 
+            $("#q9").val().trim(), 
+            $("#q10").val().trim()
           ];
           var newFriend = {
             name: $("#name").val(),
@@ -299,7 +306,7 @@
 
           })
         } else {
-          alert("Form not correctly filled out!");
+          alert("Oops! Please fill out all the forms.");
         }
       });
     </script>
